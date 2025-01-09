@@ -35,6 +35,7 @@ body {
   position: relative;
   top: -350px;
 }
+
 .placeholder1 {
   background-color: rgba(0, 0, 0, 0.237);
   color: rgb(255, 255, 255);
@@ -68,7 +69,7 @@ body {
 }
 
 .card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -345,13 +346,9 @@ select.option {
   border-radius: 8px;
   padding: 20px;
   z-index: 2;
-  margin-top: 400px;
+  /* margin-top: 400px; */
   margin-left: 150px;
-  margin-top: -270px;
-}
-
-h2 {
-  margin-bottom: 20px;
+  /* margin-top: -270px; */
 }
 
 table {
@@ -419,10 +416,10 @@ table td {
   margin-right: 2px; /* Set margin to 2px to minimize gap */
 }
 
-img {
-  width: 20px; /* Smaller width */
-  height: 20px; /* Smaller height */
-}
+/* img {
+  width: 20px;
+  height: 20px;
+} */
 
 /* Optional: Remove the margin from the last image */
 .pics .download:last-child {

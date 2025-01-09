@@ -3,7 +3,9 @@ from flask_cors import CORS
 from pytubefix import YouTube
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+
+CORS(app, resources={r"/*": {"origins": "http://127.0.0.1:3000"}})
+
 
 @app.route('/check_url', methods=['POST'])
 def check_url():
@@ -12,6 +14,8 @@ def check_url():
 
     yt = YouTube(url)
     streams_info = {
+        'title': yt.title,
+        'thumbnail_url': yt.thumbnail_url,
         'progressive': [],
         'adaptive_video': [],
         'audio': []
